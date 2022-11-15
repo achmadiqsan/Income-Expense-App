@@ -10,20 +10,12 @@ Incom Expense App With Delphi 7
 THANKS TO : 
 1. ALLAH SWT
 2. RASULLULAH SAW
-3. ORANG TUA
-4. SAUDARA DAN TEMAN-TEMAN
-5. SERTA YOUTUBE CHANNEL EXCEL & VBA TUTORIAL FOR MY INSPIRATION : https://www.youtube.com/c/EXCELVBATUTORIALES
+3. SERTA YOUTUBE CHANNEL EXCEL & VBA TUTORIAL FOR MY INSPIRATION : https://www.youtube.com/c/EXCELVBATUTORIALES
 
 Environment :
 1. Delphi 7 (Full No Add Other Component)
 2. Ms. Access 2019 (Database)
 
 Quote : "Maka sesungguhnya beserta kesulitan ada kemudahan, sesungguhnya beserta kesulitan itu ada kemudahan." Q.S Al-Insyirah (5-6)
-
-Note MIT LICENSE : 
-1. Penulis ingin Memulai Go Open Source
-2. Aplikasi ini Untuk Pembelajaran
-3. Jika Ingin Mengembangkan Aplikasi ini Di Persilahkan dengan menggunakan Github Secara Open Source
-4. Jika Tetap Ingin Menjual Aplikasi ini, Jangan Lupa Hasil Keuntungan dari Penjualan Aplikasi ini di Sedekahkan Ke pada Orang yang membutuhkan, Anak Yatim, Anak Yatim Piatu dan Sebagainya Agar Menjadi Doa Kepada Pembuat Aplikasi Beserta Keluarga Besar https://github.com/achmadiqsan.
 
 LOKASI FILE AGAR TIDAK ERROR : SIMPAN FILE CODING DI DRIVE D
