@@ -118,14 +118,34 @@ combobox1.Clear;
 end;
 
 procedure TForm1.FormActivate(Sender: TObject);
+var
+  data1, data2 : Real;
 begin
   pilihan;
   income;
-  Panel6.Caption := 'Rp. ' + FormatFloat('#,#0;(#,#0);#,#0',DM.Income['Total']);
+  if DM.Income['Total'] = Null then
+    begin
+      Panel6.Caption := 'Rp. ' + FormatFloat('#,#0;(#,#0);#,#0',0);
+      data1 := 0;
+    end
+  else
+    begin
+      Panel6.Caption := 'Rp. ' + FormatFloat('#,#0;(#,#0);#,#0',DM.Income['Total']);
+      data1 := DM.Income['Total'];
+    end;
   expense;
-  Panel13.Caption := 'Rp. ' + FormatFloat('#,#0;(#,#0);#,#0',DM.Expense['Total']);
+  if DM.Expense['Total'] = Null then
+    begin
+      Panel13.Caption := 'Rp. ' + FormatFloat('#,#0;(#,#0);#,#0',0);
+      data2 := 0;
+    end
+  else
+    begin
+      Panel13.Caption := 'Rp. ' + FormatFloat('#,#0;(#,#0);#,#0',DM.Expense['Total']);
+      data2 := DM.Expense['Total'];
+    end;
   chartpie;
-  Panel9.Caption := 'Rp. ' + FormatFloat('#,#0;(#,#0);#,#0',DM.Income['Total'] - DM.Expense['Total']);
+  Panel9.Caption := 'Rp. ' + FormatFloat('#,#0;(#,#0);#,#0',data1 - data2);
 end;
 
 procedure TForm1.income;
@@ -165,8 +185,23 @@ procedure TForm1.chartpie;
 var
   total_chart_Income, total_chart_Expense : Real;
 begin
-  total_chart_Income := DM.Income['Total'];
-  total_chart_Expense := DM.Expense['Total'];
+  if DM.Income['Total'] = null then
+      begin
+        total_chart_Income := 0;
+      end
+  else
+    begin
+      total_chart_Income := DM.Income['Total'];
+    end;
+  //
+  if DM.Expense['Total'] = null then
+      begin
+        total_chart_Expense := 0;
+      end
+  else
+    begin
+      total_chart_Expense := DM.Expense['Total'];
+    end;
   Chart2.Series[0].Clear;
   Chart2.Series[0].Add(total_chart_Expense,'Expense',$00EBE5EA);
   Chart2.Series[0].Add(total_chart_Income,'Income',$00262626);

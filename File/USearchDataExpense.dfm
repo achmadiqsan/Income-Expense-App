@@ -20,8 +20,8 @@ object FSearchDataExpense: TFSearchDataExpense
   object Label1: TLabel
     Left = 8
     Top = 13
-    Width = 330
-    Height = 32
+    Width = 298
+    Height = 33
     Cursor = crHandPoint
     Caption = 'SEARCH DATA EXPENSE'
     Color = 16309173
@@ -58,7 +58,7 @@ object FSearchDataExpense: TFSearchDataExpense
       Left = 25
       Top = 45
       Width = 816
-      Height = 22
+      Height = 21
       Color = 3282457
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite

@@ -19,8 +19,8 @@ object FSearchDataIncome: TFSearchDataIncome
   object Label1: TLabel
     Left = 8
     Top = 13
-    Width = 310
-    Height = 32
+    Width = 284
+    Height = 33
     Cursor = crHandPoint
     Caption = 'SEARCH DATA INCOME'
     Color = 16309173
@@ -57,7 +57,7 @@ object FSearchDataIncome: TFSearchDataIncome
       Left = 25
       Top = 45
       Width = 816
-      Height = 22
+      Height = 21
       Color = 3282457
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite

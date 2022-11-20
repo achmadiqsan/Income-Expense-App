@@ -40,6 +40,8 @@ RadioButton1.Checked := False;
 RadioButton2.Checked := False;
 Edit3.Clear;
 DM.ADOQMasterExpense.Filtered := False;
+DM.ADOTMasterIncome.Close;
+DM.ADOTMasterIncome.Open;
 end;
 
 procedure TFSearchDataIncome.Edit3Change(Sender: TObject);

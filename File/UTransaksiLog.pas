@@ -50,6 +50,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure Edit2KeyPress(Sender: TObject; var Key: Char);
     procedure FormActivate(Sender: TObject);
+    procedure refresh;
   private
     { Private declarations }
   public
@@ -136,6 +137,7 @@ begin
   RadioButton5.Checked := False;
   RadioButton6.Checked := False;
   RadioButton7.Checked := False;
+  refresh;
 end;
 
 procedure TFTransaksiLog.Panel3Click(Sender: TObject);
@@ -167,11 +169,14 @@ begin
     Edit3.Clear;
     Panel3.Enabled := False;
     ComboBox1.Text := '-- PILIH TYPE --';
+    refresh;
   end;
 end;
 
 procedure TFTransaksiLog.Panel4Click(Sender: TObject);
 begin
+  RadioButton4.Checked := False;
+  Edit3.Clear;
   if Edit1.Text = '' then MessageDlg('Code Kosong',mtinformation,[mbok],0) else
   if Edit2.Text = '' then MessageDlg('Account Kosong',mtinformation,[mbok],0) else
   if ComboBox1.Text = '-- PILIH TYPE --' then MessageDlg('Silahkan Pilih Type',mtinformation,[mbok],0) else
@@ -195,12 +200,14 @@ begin
     Label6.Caption := 'KodeAccount';
     Edit2.Clear;
     Edit4.Clear;
-    Edit3.Clear;
     Panel3.Enabled := False;
+    //
     Panel4.Enabled := False;
     Panel5.Enabled := False;
     Panel2.Enabled := True;
     ComboBox1.Text := '-- PILIH TYPE --';
+    DM.ADOTLog.Filtered := False;
+    refresh;
   end;
 end;
 
@@ -243,6 +250,7 @@ begin
     Panel5.Enabled := False;
     Panel2.Enabled := True;
     ComboBox1.Text := '-- PILIH TYPE --';
+    refresh;
    End;
 end;
 
@@ -321,6 +329,7 @@ begin
   Edit6.Clear;
   Edit7.Clear;
   ComboBox1.Text := '-- PILIH TYPE --';
+  Panel2.Enabled := True;
   Panel3.Enabled := False;
   Panel4.Enabled := False;
   Panel5.Enabled := False;
@@ -330,6 +339,7 @@ begin
   RadioButton5.Checked := False;
   RadioButton6.Checked := False;
   RadioButton7.Checked := False;
+  refresh;
 end;
 
 procedure TFTransaksiLog.FormShow(Sender: TObject);
@@ -377,8 +387,14 @@ end;
 
 procedure TFTransaksiLog.FormActivate(Sender: TObject);
 begin
+  refresh;
+end;
+
+procedure TFTransaksiLog.refresh;
+begin
   DM.ADOTLog.Close;
   DM.ADOTLog.Open;
+  DM.ADOTLog.Sort := 'code ASC';
 end;
 
 end.

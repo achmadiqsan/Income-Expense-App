@@ -87,6 +87,8 @@ RadioButton1.Checked := False;
 RadioButton2.Checked := False;
 Edit3.Clear;
 DM.ADOQMasterExpense.Filtered := False;
+DM.ADOTMasterExpense.Close;
+DM.ADOTMasterExpense.Open;
 end;
 
 end.
